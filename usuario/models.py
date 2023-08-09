@@ -6,6 +6,14 @@ from .managers import CustomUserManager
 
 
 class Usuario(AbstractUser):
+    # aluno = "AL"
+    # professor = "PR"
+    
+    # tipo_usuario_escolhas = [
+    #     (aluno, 'aluno'),
+    #     (professor, 'professor'),
+    # ]
+    
     username = None
     email = models.EmailField(_("e-mail address"), unique=True)
     cpf = models.CharField(_("CPF"), max_length=11, blank=True, null=True)
@@ -13,7 +21,12 @@ class Usuario(AbstractUser):
     data_nascimento = models.DateField(
         _("Birth Date"), auto_now=False, auto_now_add=False, blank=True, null=True
     )
-
+    # tipo_usuario = models.CharField(
+    #     max_length=2,
+    #     choices=tipo_usuario_escolhas,
+    #     default=aluno,
+    # )
+    
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     EMAIL_FIELD = "email"
