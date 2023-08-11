@@ -3,8 +3,9 @@ from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
 from .forms import CustomUserChangeForm, CustomUserCreationForm
-from .models import Usuario
+from .models import Usuario, TipoUsuario
 
+admin.site.register(TipoUsuario)
 
 @admin.register(Usuario)
 class CustomUserAdmin(UserAdmin):
@@ -22,13 +23,13 @@ class CustomUserAdmin(UserAdmin):
         "is_active",
     )
     fieldsets = (
-        (None, {"fields": ("email", "password")}),
+        (None, {"fields": ("email", "password", "tipo_usuario",)}),
         (
             _("Personal info"),
             {
                 "fields": (
                     "first_name",
-                    "last_name",
+                    "last_name"
                 )
             },
         ),
