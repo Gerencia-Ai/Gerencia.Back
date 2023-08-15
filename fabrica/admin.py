@@ -1,8 +1,9 @@
 from django.contrib import admin
 
-from fabrica.models import Comentario, Projeto, MembrosProjeto
+from fabrica.models import Comentario, Projeto, Post
 
 admin.site.register(Comentario)
 admin.site.register(Projeto)
-admin.site.register(MembrosProjeto)
+admin.site.register(Post)
+
 
