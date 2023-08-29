@@ -13,6 +13,7 @@ class Usuario(AbstractUser):
     data_nascimento = models.DateField(
         _("Birth Date"), auto_now=False, auto_now_add=False, blank=True, null=True
     )
+    foto = models.ImageField(upload_to="images/", null=True, blank=True, default="images/default.png")
     
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []

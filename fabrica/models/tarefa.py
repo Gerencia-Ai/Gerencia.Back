@@ -3,8 +3,8 @@ from django.db import models
 from usuario.models import Usuario
 
 class Tarefa(models.Model):
-    professor = models.ForeignKey(Usuario, on_delete=models.PROTECT, related_name='professor_tarefa')
-    aluno = models.ForeignKey(Usuario, on_delete=models.PROTECT, related_name='aluno_tarefa')
+    professor = models.ForeignKey(Usuario, related_name='tarefas_alunos', on_delete=models.PROTECT)
+    aluno = models.ForeignKey(Usuario, related_name='tarefas', on_delete=models.PROTECT)
     titulo = models.CharField(max_length=200)
     descricao = models.CharField(max_length=2500)
     anexos = models.FileField(upload_to='documents/', null=True, blank=True)
