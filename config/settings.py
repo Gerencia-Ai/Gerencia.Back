@@ -143,7 +143,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-MEDIA_URL = "http://localhost:19003/media/"
+MEDIA_URL = "https://gerenciaback-iy0h-dev.fl0.io/media/"
 MEDIA_ENDPOINT = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 FILE_UPLOAD_PERMISSIONS = 0o640
