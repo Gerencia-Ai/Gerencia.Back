@@ -7,7 +7,8 @@ class Comentario(models.Model):
     texto = models.CharField(max_length=200)
     data = models.DateTimeField(auto_now_add=True)
     usuario = models.ForeignKey(Usuario, related_name="comentarios", on_delete=models.PROTECT)
-    post = models.ForeignKey(Post, related_name="comentarios", on_delete=models.PROTECT) 
+    post = models.ForeignKey(Post, related_name="comentarios", on_delete=models.PROTECT)
+    data = models.DateTimeField(auto_now_add=True) 
     
     def __str__(self):
         return self.texto
