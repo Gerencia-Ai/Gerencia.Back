@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
+from usuario.views import UsuarioViewSet
 
 from rest_framework.routers import DefaultRouter
 
@@ -22,6 +23,7 @@ router = DefaultRouter()
 router.register(r"comentarios", ComentarioViewSet)
 router.register(r"projetos", ProjetoViewSet)
 router.register(r"posts", PostViewSet)
+router.register(r"usuarios", UsuarioViewSet)
 
 from uploader.router import router as uploader_router
 
