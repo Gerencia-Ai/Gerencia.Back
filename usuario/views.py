@@ -10,3 +10,7 @@ from .serializers import TipoUsuarioSerializer
 class UsuarioViewSet(ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
+
+class TipoUsuarioViewSet(ModelViewSet):
+    queryset = TipoUsuario.objects.all()
+    serializer_class = TipoUsuarioSerializer
