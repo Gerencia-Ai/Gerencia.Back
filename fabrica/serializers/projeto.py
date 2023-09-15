@@ -6,3 +6,4 @@ class ProjetoSerializer(ModelSerializer):
     class Meta:
         model = Projeto
         fields = '__all__'
+        depth = 2
