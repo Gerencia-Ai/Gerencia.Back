@@ -26,12 +26,8 @@ class CustomUserAdmin(UserAdmin):
         (
             _("Personal info"),
             {
-                "fields": ("first_name","last_name","foto"),
+                "fields": ("first_name","last_name"),
             },
-        ),
-        (
-            _("Personal info"),
-            {"fields": ("cpf", "telefone", "data_nascimento", "foto")},
         ),
         (
             _("Permissions"),
