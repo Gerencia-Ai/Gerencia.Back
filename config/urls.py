@@ -17,11 +17,14 @@ from drf_spectacular.views import (
 )
 
 from fabrica.views import  ComentarioViewSet, ProjetoViewSet, PostViewSet 
+from usuario.views import UsuarioViewSet
 
 router = DefaultRouter()
 router.register(r"comentarios", ComentarioViewSet)
 router.register(r"projetos", ProjetoViewSet)
 router.register(r"posts", PostViewSet)
+router.register(r"usuarios", UsuarioViewSet)
+
 
 from uploader.router import router as uploader_router
 
