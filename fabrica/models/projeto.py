@@ -8,8 +8,8 @@ class Projeto(models.Model):
     descricao = models.CharField(max_length=2500)
     data = models.DateTimeField(auto_now_add=True)
     imagem = models.ImageField(upload_to='images/', null=True, blank=True)  
-    professor = models.ForeignKey(Usuario, related_name='professor', on_delete=models.PROTECT) 
-    alunos = models.ManyToManyField(Usuario, related_name='alunos') 
+    professor = models.ForeignKey(Usuario, related_name='professores', on_delete=models.PROTECT) 
+    alunos = models.ManyToManyField(Usuario, related_name='alunos', on_delete=models.PROTECT) 
     capa = models.ForeignKey(
         Image,
         related_name="+",
