@@ -14,7 +14,8 @@ class ProjetoDetailSerializer(ModelSerializer):
 class ProjetoListSerializer(ModelSerializer):
     class Meta:
         model = Projeto
-        fields = ["nome", "professor", "alunos", "descricao", "capa"]
+        fields = '__all__'
+        depth = 1
 
 class ProjetoSerializer(ModelSerializer):
     capa_attachment_key = SlugRelatedField(
