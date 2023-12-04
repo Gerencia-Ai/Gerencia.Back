@@ -44,6 +44,6 @@ urlpatterns = [
         name="redoc",
     ),
     path("api/", include(router.urls)),
-    path("api/", include(uploader_router.urls)),
+    path("api/media/", include(uploader_router.urls)),
 ]
 urlpatterns += static(settings.MEDIA_ENDPOINT, document_root=settings.MEDIA_ROOT)
